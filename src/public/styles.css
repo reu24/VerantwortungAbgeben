@@ -1,8 +1,20 @@
 .body {
-    max-width: fit-content;
+    max-width: 100%;
+    display: grid;
+    justify-content: center;
     font-family: sans-serif, serif;
     margin: 0 auto;
     padding: 10px;
+    background-image: url('wanted.png');
+    background-size: 2000px 2800px;
+}
+
+.bd {
+    max-width: 800px;
+}
+
+.input-text {
+    margin-bottom: 10px;
 }
 
 form {
@@ -14,8 +26,164 @@ button {
     margin-top: 10px;
 }
 
-h1 {
+.title {
     text-align: center;
+    font-size: 4em;
+    font-family: "Saira Semi Condensed", sans-serif;
+
+    -webkit-transform: scale(1, 2);
+    -moz-transform: scale(1, 2);
+    transform: scale(1, 2);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Saira Semi Condensed", sans-serif;
+    letter-spacing: 5px;
+}
+
+.hr {
+    display: block;
+    height: 4px;
+    border: 0;
+    border-top: 3px solid black;
+    padding: 0;
+    margin: 0.25em 0 1em;
+}
+
+.statusBar {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    justify-items: center;
+}
+
+.statusBar div:first-of-type {
+    justify-self: start;
+}
+
+.statusBar div:last-of-type {
+    justify-self: end;
+}
+
+.top-bar {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-family: "Saira Semi Condensed", sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    line-height: 15px;
+}
+
+summary {
+    padding: .5em 1.3rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    transition: height 1s ease;
+}
+
+details[open] div{
+    padding: .6em 1.5em;
+    font-size: .9em;
+    color: #606060;
+}
+
+.small {
+    font-size: .7em;
+    color: #606060;
+}
+
+.slogan {
+    font-size: 1.2em;
+    font-family: "Saira Semi Condensed", sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    border: solid #606060;
+    border-radius: 0;
+}
+
+.slogan-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slogan-text {
+    padding-top: 5px;
+    text-align: center;
+    font-size: .9em;
+    color: #606060;
+}
+
+.mySlides {
+    display:none
+}
+.w3-left, .w3-right, .w3-badge .pointi {
+    cursor: pointer
+}
+
+.pointi-container-outer {
+    display: grid;
+    justify-content: center;
+}
+
+.pointi-container-inner {
+    display: flex;
+}
+
+.pointia:hover {
+    color: var(--pico-primary-hover-background);
+}
+
+.w3-left {
+    margin-right: 105px;
+}
+
+.pointi {
+    margin-left: 105px;
+    cursor: pointer;
+}
+
+.w3-badge {
+    height:13px;width:13px;padding:0
+}
+
+.w3-hover-text-khaki {
+    color: black;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.insta {
+    width: 20px;
+}
+
+.links {
+    display: grid;
+    justify-content: center;
+}
+
+.img-container {
+    display: grid;
+    justify-content: center;
 }
 
 #snackbar {
