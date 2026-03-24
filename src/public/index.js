@@ -30,24 +30,42 @@ function plusDivs(n) {
     showDivs(slideIndex += n);
 }
 
-function currentDiv(n) {
-    showDivs(slideIndex = n);
-}
 
 function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
     if (n > x.length) {slideIndex = 1}
     if (n < 1) {slideIndex = x.length}
     for (i = 0; i < x.length; i++) {
         // @ts-ignore
         x[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-white", "");
-    }
     // @ts-ignore
     x[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " w3-white";
+}
+
+var slideIndex2 = 2;
+showDivs2(slideIndex2);
+
+function plusDivs2(n) {
+    showDivs2(slideIndex2 += n);
+}
+
+
+function showDivs2(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    if (n > x.length-1) {slideIndex2 = x.length-1}
+    if (n < 2) {slideIndex2 = 2}
+    for (i = 0; i < x.length; i++) {
+        // @ts-ignore
+        x[i].style.display = "none";
+    }
+    // @ts-ignore
+    x[slideIndex2-1].style.display = "grid";
+    x[slideIndex2-1].style.scale = 1.0;
+    x[slideIndex2-2 < 0 ? x.length-1 : slideIndex2-2].style.display = "grid";
+    x[slideIndex2 === x.length ? 0 : slideIndex2].style.display = "grid";
+    x[slideIndex2-2 < 0 ? x.length-1 : slideIndex2-2].style.scale = 0.8;
+    x[slideIndex2 === x.length ? 0 : slideIndex2].style.scale = 0.8;
 }

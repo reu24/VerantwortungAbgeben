@@ -142,6 +142,17 @@ details[open] div{
     color: var(--pico-primary-hover-background);
 }
 
+.three-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mySlides2 {
+    flex: 1 1 50px;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
 .w3-left {
     margin-right: 105px;
 }

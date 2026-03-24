@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /lucien.png
+Disallow: /mona.png
+Disallow: /slide1.jpeg
+Allow: /
